@@ -72,7 +72,8 @@ namespace TransformFunctions
             catch (Exception e)
             {
                 log.LogError(e, req.ContentType + "**" + e.Message + "**" + e.StackTrace);
-                return new System.Web.Http.InternalServerErrorResult();
+                //return new System.Web.Http.InternalServerErrorResult();
+                return new BadRequestObjectResult("Error: " + req.ContentType + "**" + e.Message + "**" + e.StackTrace);
             }
         }
     }
