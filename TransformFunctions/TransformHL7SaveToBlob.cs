@@ -1,7 +1,7 @@
 /* 
 * 2018 Microsoft Corp
 * 
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ìAS ISî
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ‚ÄúAS IS‚Äù
 * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
 * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
 * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
@@ -71,7 +71,7 @@ namespace TransformFunctions
             }
             catch (Exception e)
             {
-                log.LogError(e, e.Message);
+                log.LogError(e, req.ContentType + "**" + e.Message + "**" + e.StackTrace);
                 return new System.Web.Http.InternalServerErrorResult();
             }
         }
